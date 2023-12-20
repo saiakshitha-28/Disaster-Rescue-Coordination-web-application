@@ -1,0 +1,6 @@
+.instantchat-btn {
+    --bs-btn-padding-x: 0.50rem;
+    --bs-btn-padding-y: 0.375rem;
+    border-radius: 2em;
+    position: relative;
+}

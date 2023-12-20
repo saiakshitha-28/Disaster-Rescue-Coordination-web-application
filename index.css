@@ -1,0 +1,151 @@
+.custom-btn, .custom-btn2, .custom-btndanger {
+    --bs-btn-padding-x: 0.50rem;
+    --bs-btn-padding-y: 0.375rem;
+    border-radius: 2em;
+    position: relative;
+}
+.custom-btn2, .custom-btndanger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.custom-btn2:hover::after {
+    color:rgba(13,110,253,255);
+    content: "Chat";
+    position: absolute;
+    bottom: -20px;
+    /* Adjust this value to position the text */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    white-space: nowrap;
+}
+.custom-btndanger:hover::after {
+    color:rgb(255, 0, 0);
+    content: "UnreadChat";
+    position: absolute;
+    bottom: -20px;
+    /* Adjust this value to position the text */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+.custom-btn:hover::after {
+    color:black;
+    content: "Profile";
+    position: absolute;
+    bottom: -20px;
+    /* Adjust this value to position the text */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+#map {
+    height: 100vh;
+}
+
+
+/* Custom CSS for jump animation */
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.jumping-button {
+    animation: jump 1s infinite;
+    animation-delay: 1s;
+}
+
+.jumping-button:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rotateVibration {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        transform: rotate(0deg);
+    }
+
+    25%,
+    75% {
+        transform: translateY(-20px);
+    }
+
+    45% {
+        transform: rotate(-2deg) translateY(-20px);
+    }
+
+    47% {
+        transform: rotate(2deg) translateY(-20px);
+
+    }
+
+    49% {
+        transform: rotate(-2deg) translateY(-20px);
+    }
+
+    51% {
+        transform: rotate(2deg) translateY(-20px);
+    }
+
+    53% {
+        transform: rotate(-2deg) translateY(-20px);
+    }
+
+    55% {
+        transform: rotate(2deg) translateY(-20px);
+    }
+}
+
+.rotating-vibrating-element {
+    display: inline-block;
+    animation: rotateVibration 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.rotating-vibrating-element:hover {
+    animation-play-state: paused;
+}
+
+.shake-animation {
+    animation: shake 3s infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+}
